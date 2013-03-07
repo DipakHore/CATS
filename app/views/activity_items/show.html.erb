@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sentence:</b>
+  <%= @activity_item.sentence %>
+</p>
+
+<p>
+  <b>Assignment:</b>
+  <%= @activity_item.assignment_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_item_path(@activity_item) %> |
+<%= link_to 'Back', activity_items_path %>

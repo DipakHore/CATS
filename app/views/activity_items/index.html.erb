@@ -1,0 +1,25 @@
+<h1>Listing activity_items</h1>
+
+<table>
+  <tr>
+    <th>Sentence</th>
+    <th>Assignment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activity_items.each do |activity_item| %>
+  <tr>
+    <td><%= activity_item.sentence %></td>
+    <td><%= activity_item.assignment_id %></td>
+    <td><%= link_to 'Show', activity_item %></td>
+    <td><%= link_to 'Edit', edit_activity_item_path(activity_item) %></td>
+    <td><%= link_to 'Destroy', activity_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Activity item', new_activity_item_path %>

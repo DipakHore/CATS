@@ -1,4 +1,7 @@
 CATS::Application.routes.draw do
+  resources :activity_items
+
+
   resources :assignments
 
 
