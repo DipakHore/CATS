@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  synopsis: MyText
+  rating: 1
+  attachmentName: MyString
+  propertyLangugage: MyString
+  propertyLanguageVersion: MyString
+  propertyLicense: MyString
+  popertyLicenseUrl: MyString
+  propertyCourse: MyString
+  propertyInfoUrl: MyString
+  propertyEstimatedExperience: MyString
+  propertyEstimatedTime: MyString
+  propertyEstimatedSize: MyString
+  propertyCopyright: MyString
+  preferenceCommentNotify: false
+  queueFlag: false
+  published: false
+  statDownloads: 1
+
+two:
+  title: MyString
+  synopsis: MyText
+  rating: 1
+  attachmentName: MyString
+  propertyLangugage: MyString
+  propertyLanguageVersion: MyString
+  propertyLicense: MyString
+  popertyLicenseUrl: MyString
+  propertyCourse: MyString
+  propertyInfoUrl: MyString
+  propertyEstimatedExperience: MyString
+  propertyEstimatedTime: MyString
+  propertyEstimatedSize: MyString
+  propertyCopyright: MyString
+  preferenceCommentNotify: false
+  queueFlag: false
+  published: false
+  statDownloads: 1

@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @assignment.title %>
+</p>
+
+<p>
+  <b>Synopsis:</b>
+  <%= @assignment.synopsis %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @assignment.rating %>
+</p>
+
+<p>
+  <b>Attachmentname:</b>
+  <%= @assignment.attachmentName %>
+</p>
+
+<p>
+  <b>Propertylangugage:</b>
+  <%= @assignment.propertyLangugage %>
+</p>
+
+<p>
+  <b>Propertylanguageversion:</b>
+  <%= @assignment.propertyLanguageVersion %>
+</p>
+
+<p>
+  <b>Propertylicense:</b>
+  <%= @assignment.propertyLicense %>
+</p>
+
+<p>
+  <b>Popertylicenseurl:</b>
+  <%= @assignment.popertyLicenseUrl %>
+</p>
+
+<p>
+  <b>Propertycourse:</b>
+  <%= @assignment.propertyCourse %>
+</p>
+
+<p>
+  <b>Propertyinfourl:</b>
+  <%= @assignment.propertyInfoUrl %>
+</p>
+
+<p>
+  <b>Propertyestimatedexperience:</b>
+  <%= @assignment.propertyEstimatedExperience %>
+</p>
+
+<p>
+  <b>Propertyestimatedtime:</b>
+  <%= @assignment.propertyEstimatedTime %>
+</p>
+
+<p>
+  <b>Propertyestimatedsize:</b>
+  <%= @assignment.propertyEstimatedSize %>
+</p>
+
+<p>
+  <b>Propertycopyright:</b>
+  <%= @assignment.propertyCopyright %>
+</p>
+
+<p>
+  <b>Preferencecommentnotify:</b>
+  <%= @assignment.preferenceCommentNotify %>
+</p>
+
+<p>
+  <b>Queueflag:</b>
+  <%= @assignment.queueFlag %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%= @assignment.published %>
+</p>
+
+<p>
+  <b>Statdownloads:</b>
+  <%= @assignment.statDownloads %>
+</p>
+
+
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<%= link_to 'Back', assignments_path %>

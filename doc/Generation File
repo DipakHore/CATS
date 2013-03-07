@@ -1,0 +1,86 @@
+rails g scaffold Assignments title:string synopsis:text rating:integer attachmentName:string propertyLangugage:string propertyLanguageVersion:string propertyLicense:string popertyLicenseUrl:string propertyCourse:string propertyInfoUrl:string propertyEstimatedExperience:string propertyEstimatedTime:string propertyEstimatedSize:string propertyCopyright:string preferenceCommentNotify:boolean queueFlag:boolean published:boolean statDownloads:integer
+
+
+
+ActiveRecord::Schema.define(:version => 20110224191451) do
+
+  create_table "activity_items", :force => true do |t|
+    t.integer  "facebook_user_id", :null => false
+    t.integer  "assignment_id",    :null => false
+    t.string   "sentence",         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "assignments", :force => true do |t|
+    t.integer  "facebook_user_id",                                          :null => false
+    t.boolean  "pref_comment_notify",                    :default => false
+    t.boolean  "queue_flag",                             :default => false
+    t.boolean  "published",                              :default => false
+    t.integer  "stat_downloads",            :limit => 8, :default => 0
+  end
+
+  create_table "authorships", :force => true do |t|
+    t.integer  "facebook_user_uid",                :null => false
+    t.integer  "assignment_id",                    :null => false
+    t.integer  "role",              :default => 1
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "facebook_user_id", :null => false
+    t.integer  "assignment_id",    :null => false
+  end
+
+  create_table "download_items", :force => true do |t|
+    t.integer  "facebook_user_id"
+    t.integer  "assignment_id"
+    t.string   "path"
+    t.string   "key"
+  end
+
+  create_table "facebook_users", :force => true do |t|
+    t.integer  "uid",                 :limit => 8,                    :null => false
+    t.string   "session_key"
+    t.string   "session_expires"
+    t.datetime "last_access"
+
+    t.boolean  "pref_comment_notify",              :default => false
+    t.string   "affiliation"
+    t.integer  "access_level",        :limit => 1, :default => 0
+  end
+
+  add_index "facebook_users", ["uid"], :name => "index_facebook_users_on_uid", :unique => true
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "rating",                      :default => 0
+    t.datetime "created_at",                                 :null => false
+    t.string   "rateable_type", :limit => 15,                :null => false
+    t.integer  "rateable_id",                 :default => 0, :null => false
+    t.integer  "user_id",                     :default => 0, :null => false
+  end
+
+  add_index "ratings", ["user_id"], :name => "fk_ratings_user"
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type"], :name => "index_taggings_on_taggable_id_and_taggable_type"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
+
+end

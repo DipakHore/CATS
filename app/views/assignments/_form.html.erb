@@ -1,0 +1,89 @@
+<%= form_for(@assignment) do |f| %>
+  <% if @assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% @assignment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %><br />
+    <%= f.text_area :synopsis %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.number_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :attachmentName %><br />
+    <%= f.text_field :attachmentName %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyLangugage %><br />
+    <%= f.text_field :propertyLangugage %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyLanguageVersion %><br />
+    <%= f.text_field :propertyLanguageVersion %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyLicense %><br />
+    <%= f.text_field :propertyLicense %>
+  </div>
+  <div class="field">
+    <%= f.label :popertyLicenseUrl %><br />
+    <%= f.text_field :popertyLicenseUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyCourse %><br />
+    <%= f.text_field :propertyCourse %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyInfoUrl %><br />
+    <%= f.text_field :propertyInfoUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyEstimatedExperience %><br />
+    <%= f.text_field :propertyEstimatedExperience %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyEstimatedTime %><br />
+    <%= f.text_field :propertyEstimatedTime %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyEstimatedSize %><br />
+    <%= f.text_field :propertyEstimatedSize %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyCopyright %><br />
+    <%= f.text_field :propertyCopyright %>
+  </div>
+  <div class="field">
+    <%= f.label :preferenceCommentNotify %><br />
+    <%= f.check_box :preferenceCommentNotify %>
+  </div>
+  <div class="field">
+    <%= f.label :queueFlag %><br />
+    <%= f.check_box :queueFlag %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br />
+    <%= f.check_box :published %>
+  </div>
+  <div class="field">
+    <%= f.label :statDownloads %><br />
+    <%= f.number_field :statDownloads %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

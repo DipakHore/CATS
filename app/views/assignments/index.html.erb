@@ -1,0 +1,57 @@
+<h1>Listing assignments</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Synopsis</th>
+    <th>Rating</th>
+    <th>Attachmentname</th>
+    <th>Propertylangugage</th>
+    <th>Propertylanguageversion</th>
+    <th>Propertylicense</th>
+    <th>Popertylicenseurl</th>
+    <th>Propertycourse</th>
+    <th>Propertyinfourl</th>
+    <th>Propertyestimatedexperience</th>
+    <th>Propertyestimatedtime</th>
+    <th>Propertyestimatedsize</th>
+    <th>Propertycopyright</th>
+    <th>Preferencecommentnotify</th>
+    <th>Queueflag</th>
+    <th>Published</th>
+    <th>Statdownloads</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @assignments.each do |assignment| %>
+  <tr>
+    <td><%= assignment.title %></td>
+    <td><%= assignment.synopsis %></td>
+    <td><%= assignment.rating %></td>
+    <td><%= assignment.attachmentName %></td>
+    <td><%= assignment.propertyLangugage %></td>
+    <td><%= assignment.propertyLanguageVersion %></td>
+    <td><%= assignment.propertyLicense %></td>
+    <td><%= assignment.popertyLicenseUrl %></td>
+    <td><%= assignment.propertyCourse %></td>
+    <td><%= assignment.propertyInfoUrl %></td>
+    <td><%= assignment.propertyEstimatedExperience %></td>
+    <td><%= assignment.propertyEstimatedTime %></td>
+    <td><%= assignment.propertyEstimatedSize %></td>
+    <td><%= assignment.propertyCopyright %></td>
+    <td><%= assignment.preferenceCommentNotify %></td>
+    <td><%= assignment.queueFlag %></td>
+    <td><%= assignment.published %></td>
+    <td><%= assignment.statDownloads %></td>
+    <td><%= link_to 'Show', assignment %></td>
+    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Assignment', new_assignment_path %>
