@@ -1,6 +1,6 @@
 rails g scaffold Assignments title:string synopsis:text rating:integer attachmentName:string propertyLangugage:string propertyLanguageVersion:string propertyLicense:string popertyLicenseUrl:string propertyCourse:string propertyInfoUrl:string propertyEstimatedExperience:string propertyEstimatedTime:string propertyEstimatedSize:string propertyCopyright:string preferenceCommentNotify:boolean queueFlag:boolean published:boolean statDownloads:integer
 
-
+rails g scaffold ActivityItems sentence:string assignment_id:integer
 
 ActiveRecord::Schema.define(:version => 20110224191451) do
 

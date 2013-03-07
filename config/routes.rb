@@ -1,4 +1,7 @@
 CATS::Application.routes.draw do
+  resources :authorships
+
+
   resources :activity_items
 
 
