@@ -1,21 +1,12 @@
 CATS::Application.routes.draw do
   get "home/index"
-
+  match 'home/callback' => 'home#callback'
+    
   resources :facebook_users
-
-
   resources :download_items
-
-
   resources :comments
-
-
   resources :authorships
-
-
   resources :activity_items
-
-
   resources :assignments
 
 
