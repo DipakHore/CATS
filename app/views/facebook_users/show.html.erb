@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Uid:</b>
+  <%= @facebook_user.uid %>
+</p>
+
+<p>
+  <b>Sessionkey:</b>
+  <%= @facebook_user.sessionKey %>
+</p>
+
+<p>
+  <b>Sessionexpires:</b>
+  <%= @facebook_user.sessionExpires %>
+</p>
+
+<p>
+  <b>Lastaccess:</b>
+  <%= @facebook_user.lastAccess %>
+</p>
+
+<p>
+  <b>Affiliation:</b>
+  <%= @facebook_user.affiliation %>
+</p>
+
+<p>
+  <b>Accesslevel:</b>
+  <%= @facebook_user.accessLevel %>
+</p>
+
+<p>
+  <b>Preferencecommentnotify:</b>
+  <%= @facebook_user.preferenceCommentNotify %>
+</p>
+
+
+<%= link_to 'Edit', edit_facebook_user_path(@facebook_user) %> |
+<%= link_to 'Back', facebook_users_path %>

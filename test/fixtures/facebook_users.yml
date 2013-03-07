@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uid: 1
+  sessionKey: MyString
+  sessionExpires: MyString
+  lastAccess: 2013-03-07 13:44:39
+  affiliation: MyString
+  accessLevel: 1
+  preferenceCommentNotify: false
+
+two:
+  uid: 1
+  sessionKey: MyString
+  sessionExpires: MyString
+  lastAccess: 2013-03-07 13:44:39
+  affiliation: MyString
+  accessLevel: 1
+  preferenceCommentNotify: false

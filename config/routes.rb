@@ -1,4 +1,7 @@
 CATS::Application.routes.draw do
+  resources :facebook_users
+
+
   resources :download_items
 
 

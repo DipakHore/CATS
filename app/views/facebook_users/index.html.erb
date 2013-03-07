@@ -1,0 +1,35 @@
+<h1>Listing facebook_users</h1>
+
+<table>
+  <tr>
+    <th>Uid</th>
+    <th>Sessionkey</th>
+    <th>Sessionexpires</th>
+    <th>Lastaccess</th>
+    <th>Affiliation</th>
+    <th>Accesslevel</th>
+    <th>Preferencecommentnotify</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @facebook_users.each do |facebook_user| %>
+  <tr>
+    <td><%= facebook_user.uid %></td>
+    <td><%= facebook_user.sessionKey %></td>
+    <td><%= facebook_user.sessionExpires %></td>
+    <td><%= facebook_user.lastAccess %></td>
+    <td><%= facebook_user.affiliation %></td>
+    <td><%= facebook_user.accessLevel %></td>
+    <td><%= facebook_user.preferenceCommentNotify %></td>
+    <td><%= link_to 'Show', facebook_user %></td>
+    <td><%= link_to 'Edit', edit_facebook_user_path(facebook_user) %></td>
+    <td><%= link_to 'Destroy', facebook_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Facebook user', new_facebook_user_path %>

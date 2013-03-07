@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307184106) do
+ActiveRecord::Schema.define(:version => 20130307184439) do
 
   create_table "activity_items", :force => true do |t|
     t.string   "sentence",      :null => false
@@ -63,6 +63,18 @@ ActiveRecord::Schema.define(:version => 20130307184106) do
     t.string   "key"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "facebook_users", :force => true do |t|
+    t.integer  "uid",                     :limit => 8,                    :null => false
+    t.string   "sessionKey"
+    t.string   "sessionExpires"
+    t.datetime "lastAccess"
+    t.string   "affiliation"
+    t.integer  "accessLevel",             :limit => 1, :default => 0
+    t.boolean  "preferenceCommentNotify",              :default => false
+    t.datetime "created_at",                                              :null => false
+    t.datetime "updated_at",                                              :null => false
   end
 
 end

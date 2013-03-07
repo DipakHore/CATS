@@ -6,6 +6,10 @@ rails g scaffold Authorships assignment_id:integer role:integer
 
 rails g scaffold Comments body:text assignment_id:integer
 
+rails g scaffold DownloadItems assignment_id:integer path:string key:string
+
+rails g scaffold FacebookUsers uid:integer sessionKey:string sessionExpires:string lastAccess:datetime affiliation:string accessLevel:integer preferenceCommentNotify:boolean
+
 ActiveRecord::Schema.define(:version => 20110224191451) do
 
   create_table "activity_items", :force => true do |t|
@@ -26,20 +30,9 @@ ActiveRecord::Schema.define(:version => 20110224191451) do
 
   create_table "download_items", :force => true do |t|
     t.integer  "facebook_user_id"
-    t.integer  "assignment_id"
-    t.string   "path"
-    t.string   "key"
   end
 
   create_table "facebook_users", :force => true do |t|
-    t.integer  "uid",                 :limit => 8,                    :null => false
-    t.string   "session_key"
-    t.string   "session_expires"
-    t.datetime "last_access"
-
-    t.boolean  "pref_comment_notify",              :default => false
-    t.string   "affiliation"
-    t.integer  "access_level",        :limit => 1, :default => 0
   end
 
   add_index "facebook_users", ["uid"], :name => "index_facebook_users_on_uid", :unique => true
