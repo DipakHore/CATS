@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Assignment:</b>
+  <%= @download_item.assignment_id %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%= @download_item.path %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @download_item.key %>
+</p>
+
+
+<%= link_to 'Edit', edit_download_item_path(@download_item) %> |
+<%= link_to 'Back', download_items_path %>

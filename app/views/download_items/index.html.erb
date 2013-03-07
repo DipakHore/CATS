@@ -1,0 +1,27 @@
+<h1>Listing download_items</h1>
+
+<table>
+  <tr>
+    <th>Assignment</th>
+    <th>Path</th>
+    <th>Key</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @download_items.each do |download_item| %>
+  <tr>
+    <td><%= download_item.assignment_id %></td>
+    <td><%= download_item.path %></td>
+    <td><%= download_item.key %></td>
+    <td><%= link_to 'Show', download_item %></td>
+    <td><%= link_to 'Edit', edit_download_item_path(download_item) %></td>
+    <td><%= link_to 'Destroy', download_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Download item', new_download_item_path %>

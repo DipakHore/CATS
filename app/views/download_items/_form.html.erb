@@ -1,0 +1,29 @@
+<%= form_for(@download_item) do |f| %>
+  <% if @download_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@download_item.errors.count, "error") %> prohibited this download_item from being saved:</h2>
+
+      <ul>
+      <% @download_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :assignment_id %><br />
+    <%= f.number_field :assignment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </div>
+  <div class="field">
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

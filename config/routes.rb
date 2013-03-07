@@ -1,4 +1,7 @@
 CATS::Application.routes.draw do
+  resources :download_items
+
+
   resources :comments
 
 

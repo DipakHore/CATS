@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307183854) do
+ActiveRecord::Schema.define(:version => 20130307184106) do
 
   create_table "activity_items", :force => true do |t|
     t.string   "sentence",      :null => false
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(:version => 20130307183854) do
   create_table "comments", :force => true do |t|
     t.text     "body"
     t.integer  "assignment_id", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "download_items", :force => true do |t|
+    t.integer  "assignment_id"
+    t.string   "path"
+    t.string   "key"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
